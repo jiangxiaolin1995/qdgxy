@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>QDGXY</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+				
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">青岛工学院</h1>
+		</header>
+		<div class="mui-content">
+
+			<div class="container">
+				<div class="main">
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="images/4.jpg" width="400px" height="300px">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="images/1.jpg" width="400px" height="300px">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="images/2.jpg" width="400px" height="300px">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="images/3.jpg" width="400px" height="300px">
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="images/4.jpg" width="400px" height="300px">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="images/1.jpg" width="400px" height="300px">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+				</div>
+				<!--通知公告-->
+
+				<div class="mui-slider">
+					<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item" href="#item1">青工新闻</a>
+						<a class="mui-control-item" href="#item2">通知公告</a>
+					</div>
+					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+					<div class="mui-slider-group">
+						<div id="item1" class="mui-slider-item mui-control-content mui-active">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">青工教工足球队荣获“体彩杯”胶州市第八届全民运...</li>
+								<li class="mui-table-view-cell">青工举行2016年新教职员工入职培训结业典礼</li>
+								<li class="mui-table-view-cell">青岛工学院学子在全国大学生物联网设计大赛华东...</li>
+								<li class="mui-table-view-cell">青岛工学院2016年大学生暑期社会实践活动圆满结束</li>
+								<li class="mui-table-view-cell">青岛工学院信息工程学院联合大唐移动举行“智慧...</li>
+
+							</ul>
+						</div>
+						<div id="item2mobile" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">计算机等设备招标公告</li>
+								<li class="mui-table-view-cell">国际商务综合实验中心设备招标公告</li>
+								<li class="mui-table-view-cell">能源与动力工程实验中心设备招标公告</li>
+								<li class="mui-table-view-cell">2016年度第二学期青岛工学院教师招聘信息</li>
+								<li class="mui-table-view-cell">关于调整校领导工作分工的通知</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">面板1</a>
+						<div class="mui-collapse-content">
+							<p id="news">面板1子内容</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">面板</a>
+						<div class="mui-collapse-content">
+							<p>面板2子内容</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">面板3</a>
+						<div class="mui-collapse-content">
+							<p>面板3子内容</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="mui-content">
+
+			</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+	</script>
+
+</html>
