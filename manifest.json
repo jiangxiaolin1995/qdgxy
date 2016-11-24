@@ -14,7 +14,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "tab-webview-main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -337,9 +337,14 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"subpage-about.html"
 				],
-				"refer": [],
+				"refer": [
+					"subpage-setting.html",
+					"subpage-chat.html",
+					"subpage-map.html"
+				],
 				"priority": 0
 			},
 			"tab-webview-main.html": {
@@ -352,7 +357,8 @@
 				],
 				"refer": [
 					"tab-webview-subpage-setting.html",
-					"tab-webview-subpage-chat.html"
+					"tab-webview-subpage-chat.html",
+					"tab-webview-subpage-map.html"
 				],
 				"priority": 0
 			},
@@ -380,6 +386,28 @@
 			"tab-webview-subpage-chat.html": {
 				"resources": [
 					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"subpage-about.html": {
+				"resources": [
+					"images/2.jpg",
+					"images/1.jpg",
+					"images/3.jpg",
+					"images/4.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"subpage-chat.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
 					"css/mui.min.css"
 				],
 				"refer": [],
