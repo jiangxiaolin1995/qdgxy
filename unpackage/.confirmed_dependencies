@@ -100,7 +100,8 @@
       "js/mui.min.js",
       "fonts/mui.ttf",
       "css/mui.min.css",
-      "subpage-about.html"
+      "subpage-about.html",
+      "css/mui.css"
     ],
     "refer": [
       "subpage-setting.html",
@@ -158,7 +159,8 @@
       "images/4.jpg",
       "js/mui.min.js",
       "fonts/mui.ttf",
-      "css/mui.min.css"
+      "css/mui.min.css",
+      "css/mui.css"
     ],
     "refer": []
   },

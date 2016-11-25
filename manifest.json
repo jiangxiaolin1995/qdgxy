@@ -338,7 +338,8 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"subpage-about.html"
+					"subpage-about.html",
+					"css/mui.css"
 				],
 				"refer": [
 					"subpage-setting.html",
@@ -399,7 +400,8 @@
 					"images/4.jpg",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/mui.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -493,7 +495,6 @@
 				"examples/lazyload-image.html",
 				"js/mui.pullToRefresh.material.js",
 				"examples/dtpicker.html",
-				"css/mui.css",
 				"examples/slider-table-pagination.html",
 				"images/qrcode.png",
 				"examples/buttons.html",
