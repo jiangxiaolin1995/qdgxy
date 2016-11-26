@@ -60,9 +60,7 @@
 		"Invocation": {
 			"description": "使用Native.js能力"
 		},
-		"Messaging": {
-			"description": "访问通讯能力"
-		},
+		
 		"Orientation": {
 			"description": "访问方向感应器"
 		},
@@ -103,15 +101,13 @@
 		},
 		"NativeObj": {
 			"description": "原生对象"
-		},
-		"Share": {
-		"description": "分享对象"
-		}
+		},"Share":{
+			"description": "分享对象"}
 	},
 	"plus": {
 		"splashscreen": {
 			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": true
+			"waiting": false,"delay":"3000"
 		},
 		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
 		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
@@ -158,10 +154,7 @@
 					"<uses-permission android:name=\"android.permission.CAMERA\"/>"
 				]
 			},
-			"orientation": [
-				"portrait-primary",
-				"portrait-secondary"
-			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"orientation": ["portrait-primary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
 			"icons": {
 				"ios": {
 					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
@@ -202,7 +195,7 @@
 			"splashscreen": {
 				"ios": {
 					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						 /*iPhone3启动图片选，分辨率：320x480*/
 						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
 						"retina40": ""
 					},
@@ -219,10 +212,7 @@
 				},
 				"android": {
 					/*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/Lin/Desktop/青岛工学院.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/Lin/Desktop/青岛工学院.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/Lin/Desktop/青岛工学院.png"
+					"ldpi": ""
 				}
 			},
 			"debug": true
@@ -410,6 +400,26 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"subpage-setting.html": {
+				"resources": [
+					"css/feedback.css",
+					"js/feedback.js",
+					"js/mui.view.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"subpage-map.html": {
+				"resources": [
+					"js/mui.min.js",
 					"css/mui.min.css"
 				],
 				"refer": [],

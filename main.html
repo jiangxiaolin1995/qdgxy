@@ -14,12 +14,13 @@
 			body {
 				background-color: #efeff4;
 			}
+			.hidden{z-index: 1;}
 		</style>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<h1 id="title" class="mui-title">青岛工学院</h1>
+			<h1 id="title" class="mui-title hidden">青岛工学院</h1>
 		</header>
 		<nav class="mui-bar mui-bar-tab">
 			<a id="defaultTab" class="mui-tab-item mui-active" href="subpage-about.html">
@@ -77,6 +78,12 @@
 				}
 				//更换标题
 				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+				
+//				if(this.querySelector('.mui-tab-label').innerHTML == '设置'){
+//					$('.mui-title').remove();
+//				}
+				
+				
 				//显示目标选项卡
 				//若为iOS平台或非首次显示，则直接显示
 				if(mui.os.ios||aniShow[targetTab]){
