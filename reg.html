@@ -16,6 +16,7 @@
 			.mui-content{
 				margin-top: 0.5rem;
 			}
+			
 		</style>
 	</head>
 
@@ -25,31 +26,92 @@
 		    <h1 class="mui-title">注册</h1>
 		</header>
 		<div class="mui-content">
-		    <form class="mui-input-group">
+		    <form class="mui-input-group" method="post">
 		        <div class="mui-input-row">
 		            <label>用户名：</label>
-		            <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+		            <input type="text" id="name" class="mui-input-clear" placeholder="请输入用户名">
 		        </div>
 		        <div class="mui-input-row">
 		            <label>密码：</label>
-		            <input type="password" class="mui-input-clear" placeholder="请输入密码">
+		            <input type="password" id='password' class="mui-input-clear" placeholder="请输入密码">
 		        </div>
 		        <div class="mui-input-row">
 		            <label>确认密码：</label>
-		            <input type="password" class="mui-input-clear" placeholder="请确认密码">
+		            <input type="password" id='repassword' class="mui-input-clear" placeholder="请确认密码">
 		        </div>
 		    </form>
 		</div>
 		<div class="mui-content-padded" id="button">
-				<button class="mui-btn mui-btn-primary">重置</button>
-				<button class="mui-btn  mui-btn-primary">注册</button>
+				<button class="mui-btn mui-btn-primary" type="reset">重置</button>
+				<button class="mui-btn  mui-btn-primary" id="reg">注册</button>
 		</div>
 		
 		
 		
 		<script src="js/mui.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			mui.plusReady(function(){
+				var reg = document.getElementById('reg');
+				reg.addEventListener('tap',function(){
+					var name = document.getElementById('name');
+					var password = document.getElementById('password');
+					var repassword = document.getElementById('repassword');
+					//判断name是否为空
+					if(name.value.length == 0){
+						//plus弹窗方法
+						plus.ui.toast('用户名不能为空');
+						return;
+						
+						}
+					//判断密码是否为空
+					if(password.value.length == 0){
+						//plus弹窗方法
+						plus.ui.toast('密码不能为空');
+						return;
+						
+						}
+					//判断确认密码是否和输入密码一样
+					if(password.value!=repassword.value){
+						//plus弹窗方法
+						plus.ui.toast('两次输入的密码不一致');
+						return;
+						
+						}
+					
+					
+					//ajax传送数据
+					mui.ajax('http://localhost:80/Application/Home/reg.php',{
+						data:{
+							name:name.value,
+							password:password.value
+						},
+						dataType:'json',//服务器返回json格式数据
+						type:'post',//HTTP请求类型
+						timeout:10000,//超时时间设置为10秒；
+						//headers:{'Content-Type':'application/json'},	              
+						success:function(data){
+							//服务器返回响应，根据响应结果，分析是否登录成功；
+							plus.ui.toast(data.code)
+							if(data.code == 200){
+								plus.ui.toast(data.info);
+								mui.openWindow({
+									url:'login.html',
+									id:'login'
+								})
+							}else{
+								plus.uo.toast(data.info);
+							}
+						},
+						error:function(xhr,type,errorThrown){
+							//异常处理；
+							console.log();
+						}
+					});
+				
+				
+				});
+			});
 		</script>
 	</body>
 

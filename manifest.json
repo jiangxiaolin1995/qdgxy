@@ -414,13 +414,24 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css"
 				],
-				"refer": [],
+				"refer": [
+					"reg.html"
+				],
 				"priority": 0
 			},
 			"subpage-map.html": {
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"reg.html": {
+				"resources": [
+					"js/mui.js",
+					"css/mui.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
