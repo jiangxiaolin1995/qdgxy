@@ -26,7 +26,7 @@
 		    <h1 class="mui-title">注册</h1>
 		</header>
 		<div class="mui-content">
-		    <form class="mui-input-group" method="post">
+		    <form class="mui-input-group">
 		        <div class="mui-input-row">
 		            <label>用户名：</label>
 		            <input type="text" id="name" class="mui-input-clear" placeholder="请输入用户名">
@@ -81,15 +81,17 @@
 					
 					
 					//ajax传送数据
-					mui.ajax('http://localhost:80/Application/Home/reg.php',{
+					mui.ajax('http://127.0.0.1:80/Application/Home/reg.php',{
+						
 						data:{
 							name:name.value,
 							password:password.value
 						},
 						dataType:'json',//服务器返回json格式数据
 						type:'post',//HTTP请求类型
+						
 						timeout:10000,//超时时间设置为10秒；
-						//headers:{'Content-Type':'application/json'},	              
+							              
 						success:function(data){
 							//服务器返回响应，根据响应结果，分析是否登录成功；
 							plus.ui.toast(data.code)
@@ -105,7 +107,7 @@
 						},
 						error:function(xhr,type,errorThrown){
 							//异常处理；
-							console.log();
+							console.log(type);
 						}
 					});
 				

@@ -101,8 +101,7 @@
 		},
 		"NativeObj": {
 			"description": "原生对象"
-		},"Share":{
-			"description": "分享对象"}
+		}
 	},
 	"plus": {
 		"splashscreen": {
@@ -412,11 +411,10 @@
 					"js/mui.view.js",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
-				],
-				"refer": [
+					"css/mui.min.css",
 					"reg.html"
 				],
+				"refer": [],
 				"priority": 0
 			},
 			"subpage-map.html": {
